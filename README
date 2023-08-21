@@ -1,0 +1,87 @@
+# API RESTful - GA6-220501123-AA2-EV01
+
+Esta es una API RESTful desarrollada con Node.js, Express y MongoDB para gestionar publicaciones (posts). Permite realizar operaciones CRUD (Crear, Leer, Actualizar y Eliminar) en la base de datos para las publicaciones.
+
+## Requisitos
+
+- Node.js v14.21.3
+- MongoDB (instancia local o en la nube)
+
+## Instalación
+
+1. Clona este repositorio en tu máquina local.
+2. Navega hasta el directorio del proyecto en tu terminal.
+3. Ejecuta el siguiente comando para instalar las dependencias:
+
+   ```sh
+   npm install
+
+    Configura la conexión a tu base de datos MongoDB en app.js:
+
+    javascript
+
+    mongoose.connect('URL_DE_TU_BASE_DE_DATOS', {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
+
+Uso
+
+    Inicia el servidor local ejecutando el siguiente comando:
+
+    sh
+
+    npm start
+
+    La API estará disponible en http://localhost:3000.
+
+Endpoints
+Obtener todos los posts
+
+    Método: GET
+    Ruta: /posts
+
+Crear un nuevo post
+
+    Método: POST
+
+    Ruta: /posts
+
+    Cuerpo de la solicitud (JSON):
+
+    json
+
+    {
+      "title": "Título del post",
+      "content": "Contenido del post",
+      "author": "Autor del post"
+    }
+
+Obtener un post por ID
+
+    Método: GET
+    Ruta: /posts/:id
+
+Actualizar un post por ID
+
+    Método: PUT
+
+    Ruta: /posts/:id
+
+    Cuerpo de la solicitud (JSON):
+
+    json
+
+    {
+      "title": "Nuevo título",
+      "content": "Nuevo contenido"
+    }
+
+Eliminar un post por ID
+
+    Método: DELETE
+    Ruta: /posts/:id
+
+Contribuciones
+
+Las contribuciones son bienvenidas. Si encuentras errores o mejoras que se puedan realizar, por favor abre un problema o envía una solicitud de extracción.
